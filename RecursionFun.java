@@ -71,6 +71,7 @@ public class RecursionFun {
 		reverseArray(x, 0, x.length);
 	}
 
+	// Helper method for reverseArray(int[] x)
 	private void reverseArray(int[] x, int index, int len) {
 		// TODO: Complete this method with a recursive algorithm.
 		// Do NOT use a loop.
@@ -90,6 +91,7 @@ public class RecursionFun {
 		return arrayRangeMax(a, a.length) - arrayRangeMin(a, a.length);
 	}
 
+	// Helper method for arrayRange(int[] a) - To find maximum value
 	private int arrayRangeMax(int[] a, int len) {
 		if (len == 1) {
 			return a[0];
@@ -97,6 +99,7 @@ public class RecursionFun {
 		return Math.max(a[len - 1], arrayRangeMax(a, len - 1));
 	}
 
+	// Helper method for arrayRange(int[] a) - To find minimum value
 	private int arrayRangeMin(int[] a, int len) {
 		if (len == 1) {
 			return a[0];
@@ -111,6 +114,7 @@ public class RecursionFun {
 		return isSorted(nums, 0);
 	}
 
+	// Helper method for isSorted(int[] nums)
 	private boolean isSorted(int[] nums, int index) {
 		if (nums.length == 0) {
 			return true;
@@ -130,6 +134,7 @@ public class RecursionFun {
 		return found(search, strs, 0);
 	}
 
+	// Helper method for found(String search, String[] strs)
 	private boolean found(String search, String[] strs, int index) {
 		if (strs.length == 0) {
 			return false;

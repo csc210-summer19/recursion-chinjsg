@@ -104,9 +104,10 @@ public class LinkedList<E extends Comparable<E>> {
 		return get(first, 0, index);
 	}
 
+	// Helper method for get(int index)
 	private E get(Node ref, int startIndex, int stopIndex) {
 		// TODO: Complete this method using recursion, no loop allowed.
-		if(startIndex == stopIndex) {
+		if (startIndex == stopIndex) {
 			return ref.data;
 		}
 		return get(ref.next, startIndex + 1, stopIndex);
@@ -119,7 +120,8 @@ public class LinkedList<E extends Comparable<E>> {
 		// with first as an argument. It must be recursive, no loop allowed.
 		removeAll(first, first, el, 0);
 	}
-	
+
+	// Helper method for removeAll(E el)
 	private void removeAll(Node ref, Node prev, E el, int trackIndex) {
 		if (ref != null) {
 			if (ref.data.equals(el)) {
@@ -144,7 +146,8 @@ public class LinkedList<E extends Comparable<E>> {
 		// with first as an argument. It must be recursive, no loop allowed.
 		duplicateAll(first, first, el);
 	}
-	
+
+	// Helper method for duplicateAll(E el)
 	private void duplicateAll(Node ref, Node prev, E el) {
 		if (ref != null) {
 			if (ref.data.equals(el)) {

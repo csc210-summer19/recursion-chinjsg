@@ -169,7 +169,7 @@ public class RecursionFunTest {
 
 		assertEquals((Integer) 5, intList.get(0));
 		assertEquals((Integer) 7, intList.get(1));
-		
+
 		assertEquals(2, intList.size());
 	}
 
@@ -208,7 +208,7 @@ public class RecursionFunTest {
 		list.addLast("A");
 		list.addLast("B");
 		list.addLast("C");
-		//assertEquals(5, list.size());
+		// assertEquals(5, list.size());
 		assertEquals(7, list.size());
 		list.duplicateAll("B");
 		assertEquals("B", list.get(0));
@@ -222,7 +222,7 @@ public class RecursionFunTest {
 		assertEquals("B", list.get(8));
 		assertEquals("B", list.get(9));
 		assertEquals("C", list.get(10));
-		//assertEquals(8, list.size());
+		// assertEquals(8, list.size());
 		assertEquals(11, list.size());
 	}
 
@@ -234,9 +234,11 @@ public class RecursionFunTest {
 		ObstacleCourse top = new ObstacleCourse(2, 2, grid);
 		assertEquals(2, top.getStartRow());
 		assertEquals(2, top.getStartColumn());
+		System.out.println(top.toString());
 		top.findTheExit();
 		assertEquals(4, top.getExitRow());
 		assertEquals(1, top.getExitColumn());
+		System.out.println(top.toString());
 	}
 
 	@Test
@@ -247,22 +249,26 @@ public class RecursionFunTest {
 		ObstacleCourse top = new ObstacleCourse(2, 2, grid);
 		assertEquals(2, top.getStartRow());
 		assertEquals(2, top.getStartColumn());
+		System.out.println(top.toString());
 		top.findTheExit();
 		assertEquals(1, top.getExitRow());
 		assertEquals(0, top.getExitColumn());
+		System.out.println(top.toString());
 	}
 
 	@Test
 	public void testFindExitWithSmallGrid3() {
-		char[][] grid = { { '+', '+', ' ', '+' }, { ' ', ' ', ' ', '+' },
+		char[][] grid = { { '+', '+', ' ', '+' }, { '+', ' ', ' ', '+' },
 				{ '+', ' ', ' ', '+' }, { '+', ' ', ' ', '+' },
 				{ '+', '+', '+', '+' } };
 		ObstacleCourse top = new ObstacleCourse(3, 1, grid);
 		assertEquals(3, top.getStartRow());
 		assertEquals(1, top.getStartColumn());
+		System.out.println(top.toString());
 		top.findTheExit();
 		assertEquals(0, top.getExitRow());
 		assertEquals(2, top.getExitColumn());
+		System.out.println(top.toString());
 	}
 
 	@Test
