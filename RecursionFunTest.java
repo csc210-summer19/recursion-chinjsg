@@ -164,10 +164,13 @@ public class RecursionFunTest {
 		intList.addLast(3);
 		intList.addLast(7);
 		intList.addLast(3);
+		assertEquals(6, intList.size());
 		intList.removeAll(3);
 
 		assertEquals((Integer) 5, intList.get(0));
 		assertEquals((Integer) 7, intList.get(1));
+		
+		assertEquals(2, intList.size());
 	}
 
 	@Test
@@ -203,7 +206,10 @@ public class RecursionFunTest {
 		list.addLast("B");
 		list.addLast("X");
 		list.addLast("A");
-		assertEquals(5, list.size());
+		list.addLast("B");
+		list.addLast("C");
+		//assertEquals(5, list.size());
+		assertEquals(7, list.size());
 		list.duplicateAll("B");
 		assertEquals("B", list.get(0));
 		assertEquals("B", list.get(1));
@@ -213,7 +219,11 @@ public class RecursionFunTest {
 		assertEquals("B", list.get(5));
 		assertEquals("X", list.get(6));
 		assertEquals("A", list.get(7));
-		assertEquals(8, list.size());
+		assertEquals("B", list.get(8));
+		assertEquals("B", list.get(9));
+		assertEquals("C", list.get(10));
+		//assertEquals(8, list.size());
+		assertEquals(11, list.size());
 	}
 
 	@Test
